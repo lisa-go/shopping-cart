@@ -6,6 +6,7 @@ $normal-font: Arial, sans-serif;
 * {
     margin: 0;
     padding: 0;
+    cursor: url(../images/aero_arrow.cur), auto;
 }
 
 body {
@@ -31,23 +32,57 @@ body {
 #Sidebar {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+
+    button {
+        cursor: url(../images/aero_move.cur), auto;
+        font-family: $header-font;
+        font-size: 1.5rem;
+        text-align: left;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid gray;
+        padding: 12px;
+    }
 }
 
 #shopContainer {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+    margin: 20px;
 }
 
 .itemContainer {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
-    
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 220px;
+    align-items: center;
+   
+    .imageContainer {
+        background: linear-gradient(180deg, rgb(94, 94, 94),white);
+        border-radius: 10px;
+        width: 100%;
+        height: 50%;
+        padding: 1.5rem 0;
+        display: grid;
+        justify-content: center;
 
-    img {
-        width: 80px;
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    .itemName {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
 }
 
