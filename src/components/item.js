@@ -1,9 +1,8 @@
 
+import BuyBtn from "./BuyBtn";
 import ItemImage from "./ItemImage";
-import React, { useState } from "react";
 
-
-export default function Item({ item, setItems }){
+export default function Item({ item, addToCart }){
     
     //* setting prices for items *//
     if (item.id >= 1000000 && item.id <= 1010000 || //* Hats *//
@@ -53,19 +52,27 @@ export default function Item({ item, setItems }){
         else {
             item.price = 4500;
         }
-}
-    
+    }
 
-    
+    else if (item.price == null) {
+        item.price = 2000;
+    }
+
     return (
-        <div className="itemContainer">
+        <div className="itemContainer" key={item.id} >
             <div className="imageContainer">
-                <ItemImage itemid={item.id} />
+                <ItemImage item={item} />
             </div>
 
             <div className="itemName">{item.name}</div>
                     
-            <div className="itemPrice">{item.price} NX</div>
+
+             <div className="itemPrice">{item.price} NX</div>
+
+            <BuyBtn 
+                key={item.id}
+                item={item} 
+                addToCart={addToCart} />
         </div>
     )
 }

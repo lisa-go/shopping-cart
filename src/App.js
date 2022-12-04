@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cart from "./components/Cart";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Shop from "./components/Shop";
@@ -16,9 +15,6 @@ export default function App() {
 
         <Route path="/shop" 
           element={<Shop />} />
-
-        <Route path="/cart" 
-          element={<Cart />} />
       </Routes>
     </BrowserRouter>
   );
