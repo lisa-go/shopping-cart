@@ -1,20 +1,25 @@
+import QtyAddBtn from "./QtyAddBtn";
+import QtyMinBtn from "./QtyMinBtn";
 
 
-export default function CartPrices({ crt, cart }) {
-
-    //* find duplicates in array *//
-    function countInArray(array, value) {
-        return array.reduce((n, x) => n + (x === value), 0);
-    }
-    crt.quantity = countInArray(cart,crt);
-
-    crt.tprice = crt.quantity * crt.price;
+export default function CartPrices({ crt, cart, addToCart, removeFromCart }) {
+    //* finding duplicates in array *//
+    let quantity = cart.reduce((n, x) => n + (x === crt), 0);
+    
+    let tprice = quantity * crt.price;
 
     return (
         <div className="priceContainer">
-            <div className="cartQuantity">Qty: {crt.quantity}</div>
+            <div className="cartQuantity">
+                Qty:  
+                <QtyMinBtn crt={crt} 
+                    removeFromCart={removeFromCart} /> 
+                {quantity} 
+                <QtyAddBtn crt={crt} 
+                    addToCart={addToCart} />
+            </div>
             <div className="cartPrice">Unit Price: {crt.price} NX</div>
-            <div className="cartTprice">Total Price: {crt.tprice} NX</div>
+            <div className="cartTprice">Total Price: {tprice} NX</div>
         </div>
     )
 }

@@ -4,7 +4,7 @@ export default function BuyBtn({ item, addToCart }) {
 
 
     return (
-        <button className="buyBtn" onClick={() => addToCart(item)}>
+        <button key={item.id} className="buyBtn" onClick={() => addToCart(item)}>
             <img src={cartIcon} alt="cart" className="filter-bw" />
             Buy
         </button>

@@ -3,6 +3,7 @@ import axios from "axios";
 import Sidebar from "./Sidebar";
 import Item from "./item";
 import Cart from "./Cart";
+import loadgif from "../images/mushroom_loading.gif";
 
 export default function Shop() {
     const [loading, setLoading] = useState(false)
@@ -53,6 +54,14 @@ export default function Shop() {
     const addToCart = (product) => {
         setCart(current => [...current, product]);
     }
+    const removeFromCart = (product) => {
+        let newData = [...cart];
+        const index = newData.findIndex((element) => element === product);
+        if (index !== -1) {
+            newData.splice(index, 1);
+            setCart(newData);
+        }
+    }
 
     return (
         <div id="content">
@@ -61,15 +70,21 @@ export default function Shop() {
                 searchItems={searchItems} />
 
             <div id="shopContainer">
-                {loading ? <div>loading...</div> : 
+                {loading ? 
+                <img src={loadgif} alt="loading" style={{height: '100px'}}/>
+                : 
                     items.map((item) => 
-                        <Item key={item.id}
+                        <Item 
+                        key={item.id}
                         item={item} 
                         addToCart={addToCart} />
                 )}  
             </div>
 
-            <Cart cart={cart} loading={loading}/>
+            <Cart cart={cart} 
+                loading={loading}
+                addToCart={addToCart} 
+                removeFromCart={removeFromCart} />
         </div>
     )
 }

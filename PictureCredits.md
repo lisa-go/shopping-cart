@@ -19,5 +19,7 @@ https://icons8.com/icon/bPKHsxqH2fev/detective-hat
 Footwear icon by Icons8:
 https://icons8.com/icon/fav4rFp3gnVn/footwear
 
-Poncho icon by Icons8
+Poncho icon by Icons8:
 https://icons8.com/icon/109508/poncho
+
+All assets, logos, banner and items belong to Nexon, Maplestory.

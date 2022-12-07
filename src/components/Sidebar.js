@@ -6,6 +6,8 @@ import glove from '../images/mittens.png';
 import shoes from '../images/footwear.png';
 import cape from '../images/poncho.png';
 import search from '../images/search.svg';
+import banner1 from '../images/happy-christmas.png';
+import banner2 from '../images/MapleStory_BloomForest_banner.png';
 import React, { useState } from 'react';
 
 export default function Sidebar({ retrieveItems, searchItems }) {
@@ -61,6 +63,9 @@ export default function Sidebar({ retrieveItems, searchItems }) {
                 <img src={cape} alt="cape" />
                 Cape
             </button>
+
+            <img src={banner1} alt="banner1" className="banner" />
+            <img src={banner2} alt="banner2" className="banner" />
         </div>
     )
 }

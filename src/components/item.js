@@ -59,9 +59,9 @@ export default function Item({ item, addToCart }){
     }
 
     return (
-        <div className="itemContainer" key={item.id} >
+        <div className="itemContainer" >
             <div className="imageContainer">
-                <ItemImage item={item} />
+                <ItemImage item={item} key={item.id}/>
             </div>
 
             <div className="itemName">{item.name}</div>
