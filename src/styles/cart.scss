@@ -1,0 +1,95 @@
+#shopCart {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(44, 44, 44);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    #cartTitle {
+        padding-left: 1rem;
+        font-size: 1.6rem;
+        color: #a8c52f;
+        font-family: $header-font;
+        margin-bottom: 1rem;
+    }
+
+    #totalContainer {
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem 2rem;
+        padding: 10px;
+        border-radius: 8px;
+        color: white;
+        font-family: $header-font;
+    }
+}
+
+.cartItem {
+    display: grid;
+    min-width: max-content;
+    grid-template-columns: 1fr 2fr 1fr;
+    border-radius: 10px;
+    padding: 6px 0;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);    
+    font-size: 0.9rem;
+    margin: 0 1rem;
+
+    img {
+        grid-row: 1 / 3;
+        height: 80%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .cartName {
+        font-weight: 600;
+    }
+
+    .priceContainer {
+        grid-column: 2 / 4;
+        font-size: 0.8rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-items: end;
+        padding-right: 10px;
+
+        .cartQuantity {
+            grid-row: 1 / 3;
+            align-self: center;
+
+            button {
+                cursor: url(../images/aero_move.cur), auto;
+                height: 18px;
+                width: 18px;
+                margin: 0 5px;
+            }
+        }
+        
+        .cartTprice {
+            grid-column: 2 / 3;
+            font-weight: 600;
+            color: rgb(212, 91, 20);
+        }
+    }
+}
+
+#cartCO {
+    font-family: $header-font;
+    padding: 4px 14px;
+    border-radius: 1rem;
+    width: fit-content;
+    align-self: center;
+    margin-bottom: 1rem;
+    background-color: rgb(73, 155, 221);
+
+    &:hover {
+        transition: 1000ms;
+        background-color: rgb(116, 183, 238);
+    }
+}

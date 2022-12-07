@@ -1,0 +1,13 @@
+#home {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    
+    .bannerSlider {
+
+        img {
+            width: 1200px;
+            max-width: 100vw;
+        }
+    }
+}

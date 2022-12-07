@@ -1,0 +1,65 @@
+#shopContainer {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px;
+}
+
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 220px;
+    min-width: 150px;
+    justify-content: space-between;
+    align-items: center;
+   
+    .imageContainer {
+        background: linear-gradient(180deg, rgb(94, 94, 94),white);
+        border-radius: 10px;
+        width: 100%;
+        height: 40%;
+        padding: 1.5rem 0;
+        display: grid;
+        justify-content: center;
+
+        img {
+            width: 80px;
+            height: auto;
+        }
+    }
+
+    .itemName {
+        text-align: center;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .itemPrice {
+        font-size: 0.75rem;
+        color: grey;
+    }
+
+    .buyBtn {
+        cursor: url(../images/aero_move.cur), auto;
+        background: linear-gradient(180deg, #a8c52f, #769509);
+        border: 1px solid #93a94b;
+        border-radius: 8px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        font-size: 1.2rem;
+        padding: 3px 0;
+
+        img {
+            height: 1.5rem;
+        }
+    }
+}

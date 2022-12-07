@@ -1,0 +1,62 @@
+#Sidebar {
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0 8px 15px grey;
+    border-bottom-right-radius: 1.3rem;
+
+    form {
+        margin: 10px;
+        padding: 2px;
+        border-radius: 1rem;
+        max-width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(65, 65, 65);
+
+        img {
+            height: 1.5rem;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            padding-left: 5px;
+            font-size: 0.9rem;
+            max-width: 75%;
+            background-color: inherit;
+            color: white;
+        }
+    }
+
+    .banner {
+      padding: 10px;
+      border-radius: 1rem;
+    }
+
+    button {
+        cursor: url(../images/aero_move.cur), auto;
+        font-family: $header-font;
+        font-size: 1.5rem;
+        text-align: left;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid gray;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            height: 2rem;
+        }
+
+        &:hover {
+            background-color: white;
+            transition: 1000ms;
+        }
+    }
+}
