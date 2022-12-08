@@ -1,8 +1,10 @@
 #home {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 1rem;
+    gap: 1rem;
     
     #bannerSlider {
         position: relative;
@@ -25,14 +27,14 @@
 
         .imgnavL {
             color: #e0e0e0;
-            filter: invert(99%) sepia(96%) saturate(1%) hue-rotate(33deg) brightness(103%) contrast(100%);
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
 
             &:hover {
-                background-color: white;
-                transition: 1000ms;
+                background-color: rgba(255, 255, 255, 0.3);
+                outline: 1px solid rgba(54, 54, 54, 0.4);
+                transition: background-color 1000ms;
             }
         }
 
@@ -60,7 +62,37 @@
     }
 
     #homeContent {
-        position: absolute;
+        font-family: $header-font;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.55);
+        color: white;
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        gap: 10px;
+
+        .welcome {
+            font-size: 2.3rem;
+            color: orangered;
+        }
+
+        .subtext {
+            font-size: 1.2rem;
+        }
+
+        a {
+            margin: 1rem 0;
+            background: linear-gradient(180deg, #a8c52f, #769509);
+            font-size: 1.4rem;
+            padding: 6px 2rem;
+            border-radius: 6px;
+
+            &:hover {
+                transition: 1000ms;
+                background: #769509;
+            }
+        }
     }
 }
 
