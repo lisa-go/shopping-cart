@@ -8,7 +8,7 @@ export default function NavBar ({ cart }) {
             <span className="logo">
                 <Link to="/">
                     <img src={Logo} alt="Logo" />
-                    MapleStory Store
+                    MapleStore
                 </Link>
             </span>
             <div className="links">
