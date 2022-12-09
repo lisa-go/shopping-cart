@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.806343d4.css",
-    "main.js": "/shopping-cart/static/js/main.08811b73.js",
+    "main.js": "/shopping-cart/static/js/main.db095f27.js",
     "static/media/CashShopBGM.mp3": "/shopping-cart/static/media/CashShopBGM.1011a9aa5e5738bde62c.mp3",
     "static/media/MapleStory_BloomForest.png": "/shopping-cart/static/media/MapleStory_BloomForest.2bdb56d19812bc4579d1.png",
     "static/media/MapleStory_New_banner.png": "/shopping-cart/static/media/MapleStory_New_banner.ff05e0cc68e963a498b0.png",
@@ -18,10 +18,10 @@
     "static/media/chevron_left.svg": "/shopping-cart/static/media/chevron_left.b8b7e222cecd30a8a8ccba03b75ddce0.svg",
     "static/media/chevron_right.svg": "/shopping-cart/static/media/chevron_right.ae258ea11436a2946419af65c710681c.svg",
     "main.806343d4.css.map": "/shopping-cart/static/css/main.806343d4.css.map",
-    "main.08811b73.js.map": "/shopping-cart/static/js/main.08811b73.js.map"
+    "main.db095f27.js.map": "/shopping-cart/static/js/main.db095f27.js.map"
   },
   "entrypoints": [
     "static/css/main.806343d4.css",
-    "static/js/main.08811b73.js"
+    "static/js/main.db095f27.js"
   ]
 }
