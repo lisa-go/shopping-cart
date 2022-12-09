@@ -11,12 +11,12 @@ export default function App() {
 
   return (
     <BrowserRouter>
-    <NavBar cart={cart} />
+      <NavBar cart={cart} />
       <Routes>
-        <Route path="/" 
+        <Route path="/"
           element={<Home />} />
 
-        <Route path="/shop" 
+        <Route path="/shop"
           element={<Shop cart={cart}
             setCart={setCart} />} />
       </Routes>

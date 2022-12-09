@@ -14,7 +14,7 @@ export default function Sidebar({ retrieveItems, searchItems }) {
     const [input, setInput] = useState('');
 
     const onInputChange = (e) => {
-       setInput(e.target.value);
+        setInput(e.target.value);
     }
 
     const onSubmit = (e) => {
@@ -26,9 +26,9 @@ export default function Sidebar({ retrieveItems, searchItems }) {
         <div id="Sidebar">
             <form onSubmit={onSubmit}>
                 <img src={search} alt="search" className="filter-bw" />
-                <input type="text" placeholder="Search Items..." onChange={onInputChange}/>
+                <input type="text" placeholder="Search Items..." onChange={onInputChange} />
             </form>
-            
+
             <button onClick={() => retrieveItems('Hat')}>
                 <img src={hat} alt="hat" />
                 Hat

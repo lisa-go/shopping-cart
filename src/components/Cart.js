@@ -10,21 +10,21 @@ export default function Cart({ cart, loading, addToCart, removeFromCart }) {
         <div id="shopCart">
             <div id="cartTitle">CART ({cart.length})</div>
 
-            {loading ? 
-            <img src={loadgif} alt="loading" style={{height: '80px', objectFit: 'contain'}} />
-            : 
-                    uniqueItem.map((crt) => 
-                <div className="cartItem" key={crt.id}>
-                    <img src={crt.image} alt={crt.id} />
-                    <div className="cartName">{crt.name}</div>
-                    <div className="cartCat">{crt.typeInfo.subCategory}</div>
-                    <CartPrices crt={crt} 
-                        cart={cart} 
-                        key={crt.id} 
-                        addToCart={addToCart} 
-                        removeFromCart={removeFromCart} />
-                </div>
-                )}  
+            {loading ?
+                <img src={loadgif} alt="loading" style={{ height: '80px', objectFit: 'contain' }} />
+                :
+                uniqueItem.map((crt) =>
+                    <div className="cartItem" key={crt.id}>
+                        <img src={crt.image} alt={crt.id} />
+                        <div className="cartName">{crt.name}</div>
+                        <div className="cartCat">{crt.typeInfo.subCategory}</div>
+                        <CartPrices crt={crt}
+                            cart={cart}
+                            key={crt.id}
+                            addToCart={addToCart}
+                            removeFromCart={removeFromCart} />
+                    </div>
+                )}
             <CartTotal cart={cart} />
             <button id="cartCO">Check Out</button>
         </div>

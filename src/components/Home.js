@@ -1,7 +1,7 @@
 import Banner from "./Banner";
 
 export default function Home() {
-    
+
     return (
         <div id="home">
             <Banner />
@@ -11,11 +11,11 @@ export default function Home() {
                 </div>
 
                 <div className="subtext">
-                Hundreds of New Content Available Daily
+                    Hundreds of New Content Available Daily
                 </div>
 
                 <a href="/shop">Shop Now!</a>
-            </div> 
+            </div>
         </div>
     )
 }

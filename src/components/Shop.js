@@ -18,11 +18,12 @@ export default function Shop({ cart, setCart }) {
             method: 'GET',
             url: 'https://maplestory.io/api/GMS/237/item?count=40&overallCategoryFilter=equip&categoryFilter=armor&subCategoryFilter=overall&cashFilter=true'
         })
-        .then(Response => {console.log(Response.data)
-            setItems(Response.data)
-            setTitle('Search Results for ' + 'Overall')})
-        .catch(Error => {console.log(Error)})
-        .finally(() => {setLoading(false)})
+            .then(Response => {
+                setItems(Response.data)
+                setTitle('Search Results for ' + 'Overall')
+            })
+            .catch(Error => { console.log(Error) })
+            .finally(() => { setLoading(false) })
     }, []);
 
     function retrieveItems(category) {
@@ -30,14 +31,15 @@ export default function Shop({ cart, setCart }) {
         axios({
             method: 'GET',
             url: 'https://maplestory.io/api/GMS/237/item?count=40&overallCategoryFilter=equip&categoryFilter=armor&subCategoryFilter='
-             + category + 
-             '&cashFilter=true'
+                + category +
+                '&cashFilter=true'
         })
-        .then(Response => {console.log(Response.data)
-            setItems(Response.data)
-            setTitle('Search Results for ' + category)})
-        .catch(Error => {console.log(Error)})
-        .finally(() => {setLoading(false)})
+            .then(Response => {
+                setItems(Response.data)
+                setTitle('Search Results for ' + category)
+            })
+            .catch(Error => { console.log(Error) })
+            .finally(() => { setLoading(false) })
     }
 
     function searchItems(string) {
@@ -45,19 +47,20 @@ export default function Shop({ cart, setCart }) {
         axios({
             method: 'GET',
             url: 'https://maplestory.io/api/GMS/237/item?count=40&cashFilter=true&searchFor='
-             + string + 
-             '&cashFilter=true'
+                + string +
+                '&cashFilter=true'
         })
-        .then(Response => {console.log(Response.data)
-            setItems(Response.data)
-            if (Response.data.length >= 1) {
-            setTitle('Search Results for ' + string)}
-            else {
-                setTitle('No Results for ' + string)
-            }
+            .then(Response => {
+                setItems(Response.data)
+                if (Response.data.length >= 1) {
+                    setTitle('Search Results for ' + string)
+                }
+                else {
+                    setTitle('No Results for ' + string)
+                }
             })
-        .catch(Error => {console.log(Error)})
-        .finally(() => {setLoading(false)})
+            .catch(Error => { console.log(Error) })
+            .finally(() => { setLoading(false) })
     }
 
     const addToCart = (product) => {
@@ -75,25 +78,25 @@ export default function Shop({ cart, setCart }) {
     return (
         <div id="content">
             <Sidebar
-                retrieveItems={retrieveItems} 
+                retrieveItems={retrieveItems}
                 searchItems={searchItems} />
 
             <div id="shopContainer">
                 <div id="shopSearch">{title}</div>
-                {loading ? 
-                <img src={loadgif} alt="loading" style={{height: '100px'}}/>
-                : 
-                    items.map((item) => 
-                        <Item 
-                        key={item.id}
-                        item={item} 
-                        addToCart={addToCart} />
-                )}  
+                {loading ?
+                    <img src={loadgif} alt="loading" style={{ height: '100px' }} />
+                    :
+                    items.map((item) =>
+                        <Item
+                            key={item.id}
+                            item={item}
+                            addToCart={addToCart} />
+                    )}
             </div>
 
-            <Cart cart={cart} 
+            <Cart cart={cart}
                 loading={loading}
-                addToCart={addToCart} 
+                addToCart={addToCart}
                 removeFromCart={removeFromCart} />
         </div>
     )

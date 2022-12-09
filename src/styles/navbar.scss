@@ -1,43 +1,48 @@
 #NavBar {
-    width: 100%;
-    background-color: rgb(22, 22, 22);
-    color: white;
-    font-family: $header-font;
-    font-size: 1.3rem;
+  width: 100%;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-family: $header-font;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+
+  .logo a {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    cursor: url(../images/aero_move.cur), auto;
+    padding-left: 1rem;
 
-    .logo a {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      height: 100%;
+    img {
+      height: 50px;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+
+    a {
       cursor: url(../images/aero_move.cur), auto;
-      padding-left: 1rem;
-
-      img{
-        height: 50px;
-      }
-    }
-
-    .links {
-      padding-right: 10%;
+      height: 100%;
+      width: 100px;
       display: flex;
-      gap: 1rem;
-      align-items: flex-end;
+      justify-content: flex-end;
+      align-items: center;
 
-      a {
-        cursor: url(../images/aero_move.cur), auto;
-        height: 100%;
-        width: 100px;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        &:hover {
-          transition: 1000ms;
-          background-color: rgba(255, 255, 255, 0.1);
-        }
+      &:hover {
+        transition: 1000ms;
+        background-color: rgba(255, 255, 255, 0.1);
       }
     }
+
+    audio {
+      padding-bottom: 8px;
+      width: 200px;
+      height: 35px;
+    }
+  }
 }
