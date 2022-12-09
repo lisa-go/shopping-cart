@@ -83,17 +83,18 @@ export default function Shop({ cart, setCart }) {
 
             <div id="shopContainer">
                 <div id="shopSearch">{title}</div>
-                {loading ?
-                    <img src={loadgif} alt="loading" style={{ height: '100px' }} />
-                    :
-                    items.map((item) =>
-                        <Item
-                            key={item.id}
-                            item={item}
-                            addToCart={addToCart} />
-                    )}
+                    <div id="itemDisplay">
+                    {loading ?
+                        <img src={loadgif} alt="loading" style={{ height: '100px' }} />
+                        :
+                        items.map((item) =>
+                            <Item
+                                key={item.id}
+                                item={item}
+                                addToCart={addToCart} />
+                        )}
+                </div>
             </div>
-
             <Cart cart={cart}
                 loading={loading}
                 addToCart={addToCart}

@@ -1,17 +1,22 @@
 #shopContainer {
     grid-column: 2 / 3;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin: 20px;
+
 
     #shopSearch {
-        grid-column: 1 / 5;
         font-family: $header-font;
         font-size: 1.3rem;
         color: white;
-        padding-left: 1rem;
+        padding-left: 2rem;
+        margin-top: 20px;
+        max-height: fit-content;
     }
+}
+
+#itemDisplay {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 10px 20px;
 }
 
 .itemContainer {
