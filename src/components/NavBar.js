@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import Logo from "../images/maplestory-logo.png";
 import bgm from "../CashShopBGM.mp3";
 

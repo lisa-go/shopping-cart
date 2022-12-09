@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Banner from "./Banner";
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
                     Hundreds of New Content Available Daily
                 </div>
 
-                <a href="/shop">Shop Now!</a>
+                <Link to="/shop">Shop Now!</Link>
             </div>
         </div>
     )
