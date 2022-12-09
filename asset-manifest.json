@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.806343d4.css",
+    "main.js": "/shopping-cart/static/js/main.4e566e0d.js",
+    "static/media/CashShopBGM.mp3": "/shopping-cart/static/media/CashShopBGM.1011a9aa5e5738bde62c.mp3",
+    "static/media/MapleStory_BloomForest.png": "/shopping-cart/static/media/MapleStory_BloomForest.2bdb56d19812bc4579d1.png",
+    "static/media/MapleStory_New_banner.png": "/shopping-cart/static/media/MapleStory_New_banner.ff05e0cc68e963a498b0.png",
+    "static/media/MapleStory_BTS_banner.png": "/shopping-cart/static/media/MapleStory_BTS_banner.50af43467b68714ac586.png",
+    "static/media/happy-christmas.png": "/shopping-cart/static/media/happy-christmas.2a872593885d05e84cfc.png",
+    "static/media/MapleStory_BloomForest_banner.png": "/shopping-cart/static/media/MapleStory_BloomForest_banner.13d73653c7639a6a0144.png",
+    "static/media/mushroom_loading.gif": "/shopping-cart/static/media/mushroom_loading.fad0eda60f47744ee6a8.gif",
+    "static/media/maplestory-logo.png": "/shopping-cart/static/media/maplestory-logo.b1dbe45882f7406a779a.png",
+    "static/media/aero_arrow.cur": "/shopping-cart/static/media/aero_arrow.bd838c7e89cf45bd07dc.cur",
+    "static/media/aero_move.cur": "/shopping-cart/static/media/aero_move.c4771c505a64e6f2cb40.cur",
+    "static/media/shopping_cart.svg": "/shopping-cart/static/media/shopping_cart.76267cb435dda1a8b76faeceb0e1e6ae.svg",
+    "index.html": "/shopping-cart/index.html",
+    "static/media/search.svg": "/shopping-cart/static/media/search.6372673a240fcd5cca7498fac179b58a.svg",
+    "static/media/chevron_left.svg": "/shopping-cart/static/media/chevron_left.b8b7e222cecd30a8a8ccba03b75ddce0.svg",
+    "static/media/chevron_right.svg": "/shopping-cart/static/media/chevron_right.ae258ea11436a2946419af65c710681c.svg",
+    "main.806343d4.css.map": "/shopping-cart/static/css/main.806343d4.css.map",
+    "main.4e566e0d.js.map": "/shopping-cart/static/js/main.4e566e0d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.806343d4.css",
+    "static/js/main.4e566e0d.js"
+  ]
+}
