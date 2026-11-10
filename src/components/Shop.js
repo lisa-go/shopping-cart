@@ -51,8 +51,19 @@ export default function Shop({ cart, setCart }) {
                 '&cashFilter=true'
         })
             .then(Response => {
-                setItems(Response.data)
-                if (Response.data.length >= 1) {
+                const searchTerm = string.toLowerCase();
+                const matchingItems = Response.data.filter(item =>
+                    [
+                        item.name,
+                        item.typeInfo?.overallCategory,
+                        item.typeInfo?.category,
+                        item.typeInfo?.subCategory
+                    ].some(value =>
+                        typeof value === 'string' && value.toLowerCase().includes(searchTerm)
+                    )
+                )
+                setItems(matchingItems)
+                if (matchingItems.length >= 1) {
                     setTitle('Search Results for ' + string)
                 }
                 else {
